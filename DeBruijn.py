@@ -22,13 +22,8 @@ def DeBruijn(n):
     node = int(str(getbinary(i,n)),2)
     left = int(left_shift(getbinary(i,n)),2)
     left_swap = int(reverse_first_bit(left_shift(getbinary(i,n))),2)
-    print (getbinary(i,n),left_shift(getbinary(i,n)),reverse_first_bit(left_shift(getbinary(i,n))))
-
-    # swap = int(str(reverse_last_bit(getbinary(i,n))),2)
-    # left = int(left_shift(getbinary(i,n)),2)
-    # right = int(left_shift(getbinary(i,n)),2)
-    if node!= left:
+    
+    if node!= left: #no self-loop
       G.add_edge(node,left)
     G.add_edge(node,left_swap)
-    # G.add_edge(node,right)
   return G
