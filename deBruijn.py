@@ -1,3 +1,4 @@
+import networkx as nx
 def DeBruijn(n):
   import collections
   def reverse_first_bit(b):
